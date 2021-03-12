@@ -1,0 +1,89 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Proyecto1_multidimencional</Database>
+    <Server>WIN-HRJ1QBPDOO2</Server>
+    <ConnectionString>Data Source=WIN-HRJ1QBPDOO2;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>0pbP5c9uleTqCA3hUA7JPL9jDes=8/3/2021 03:17:318/3/2021 03:17:31</TimeStamp>
+        <ID>
+          <String>UTNDW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>RT5F1EsRMSEQW2xWEaem5nflbW4=12/3/2021 01:22:539/3/2021 18:46:36</TimeStamp>
+        <ID>
+          <String>UTNDW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>QUA5MSgVO53Azqc0Isu3/53eXOA=12/3/2021 01:25:4712/3/2021 01:23:54</TimeStamp>
+        <ID>
+          <String>DIM PRODUCTOS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>KW687Xu8azK2nI2d+UD+azz7OOY=12/3/2021 01:25:4712/3/2021 01:23:54</TimeStamp>
+        <ID>
+          <String>DIM CLIENTES</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>5jD5lWmcnqkpr97UrKbi/UbHLHo=12/3/2021 01:25:4712/3/2021 01:23:54</TimeStamp>
+        <ID>
+          <String>DIM EMPLEADOS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>0v5oIgDUv8TxAxJtfOauG48JOtM=12/3/2021 01:25:4712/3/2021 01:23:54</TimeStamp>
+        <ID>
+          <String>DIM SUCURSALES</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>mw3DkaNGMk2wrv2RFR89x3b++J8=12/3/2021 01:25:4712/3/2021 01:23:54</TimeStamp>
+        <ID>
+          <String>DIM FECHAS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>3m2MBTTuCXYoGysWA98VZkDLPvs=12/3/2021 01:25:4712/3/2021 01:23:53Br2vV9qALhax3bOZ4elhSiC7Srg=12/3/2021 01:23:5412/3/2021 01:23:53</TimeStamp>
+        <ID>
+          <String>UTNDW_CUBE</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>VfCi52sinGdsBsrNWR+08GzyaZQ=8/3/2021 03:12:558/3/2021 03:12:55</TimeStamp>
+      <ID>
+        <String>Proyecto1_multidimencional</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2021-03-12T08:24:49.993333Z</LastDeployed>
+</DeploymentSnapshot>

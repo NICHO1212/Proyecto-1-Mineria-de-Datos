@@ -1,0 +1,526 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "es-CR",
+    "dataSources": [
+      {
+        "name": "UTNDW",
+        "connectionString": "Provider=SQLNCLI11;Data Source=WIN-HRJ1QBPDOO2;Initial Catalog=UTNDW;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateAccount",
+        "account": "Administrador",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "DIM_CLIENTES",
+        "columns": [
+          {
+            "name": "CEDULA",
+            "dataType": "double",
+            "sourceColumn": "CEDULA",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "NOMBRE",
+            "dataType": "string",
+            "sourceColumn": "NOMBRE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CORREO",
+            "dataType": "string",
+            "sourceColumn": "CORREO",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "FEC_NACIMIENTO",
+            "dataType": "dateTime",
+            "sourceColumn": "FEC_NACIMIENTO",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "ESTADO_CIVIL",
+            "dataType": "string",
+            "sourceColumn": "ESTADO_CIVIL",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "SEXO",
+            "dataType": "string",
+            "sourceColumn": "SEXO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "OCUPACION",
+            "dataType": "string",
+            "sourceColumn": "OCUPACION",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "EDUCACION",
+            "dataType": "string",
+            "sourceColumn": "EDUCACION",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "HIJOS",
+            "dataType": "double",
+            "sourceColumn": "HIJOS",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_CLIENTES",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DIM_CLIENTES].* FROM [dbo].[DIM_CLIENTES] ",
+              "dataSource": "UTNDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_CLIENTES].* FROM [dbo].[DIM_CLIENTES] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_CLIENTES"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIM_EMPLEADOS",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CEDULA",
+            "dataType": "double",
+            "sourceColumn": "CEDULA",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "NOMBRE",
+            "dataType": "string",
+            "sourceColumn": "NOMBRE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CORREO",
+            "dataType": "string",
+            "sourceColumn": "CORREO",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "FEC_NACIMIENTO",
+            "dataType": "dateTime",
+            "sourceColumn": "FEC_NACIMIENTO",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          },
+          {
+            "name": "ESTADO_CIVIL",
+            "dataType": "string",
+            "sourceColumn": "ESTADO_CIVIL",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "SEXO",
+            "dataType": "string",
+            "sourceColumn": "SEXO",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "OCUPACION",
+            "dataType": "string",
+            "sourceColumn": "OCUPACION",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "EDUCACION",
+            "dataType": "string",
+            "sourceColumn": "EDUCACION",
+            "sourceProviderType": "Char"
+          },
+          {
+            "name": "HIJOS",
+            "dataType": "double",
+            "sourceColumn": "HIJOS",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_EMPLEADOS",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DIM_EMPLEADOS].* FROM [dbo].[DIM_EMPLEADOS] ",
+              "dataSource": "UTNDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_EMPLEADOS].* FROM [dbo].[DIM_EMPLEADOS] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_EMPLEADOS"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIM_FECHAS",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "MES",
+            "dataType": "double",
+            "sourceColumn": "MES",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "NOMBRE_MES",
+            "dataType": "string",
+            "sourceColumn": "NOMBRE_MES",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "ANNIO",
+            "dataType": "double",
+            "sourceColumn": "ANNIO",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "DIA_SEMANA",
+            "dataType": "double",
+            "sourceColumn": "DIA_SEMANA",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "DIA_ANNIO",
+            "dataType": "double",
+            "sourceColumn": "DIA_ANNIO",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "FECHA",
+            "dataType": "dateTime",
+            "sourceColumn": "FECHA",
+            "formatString": "General Date",
+            "sourceProviderType": "DBTimeStamp"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_FECHAS",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DIM_FECHAS].* FROM [dbo].[DIM_FECHAS] ",
+              "dataSource": "UTNDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_FECHAS].* FROM [dbo].[DIM_FECHAS] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_FECHAS"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIM_PRODUCTOS",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "PROVEEDOR",
+            "dataType": "string",
+            "sourceColumn": "PROVEEDOR",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "CODIGO",
+            "dataType": "double",
+            "sourceColumn": "CODIGO",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "NOMBRE",
+            "dataType": "string",
+            "sourceColumn": "NOMBRE",
+            "sourceProviderType": "WChar"
+          },
+          {
+            "name": "PRECIO_COMPRA",
+            "dataType": "double",
+            "sourceColumn": "PRECIO_COMPRA",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "PRECIO_VENTA",
+            "dataType": "double",
+            "sourceColumn": "PRECIO_VENTA",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "INVENTARIO",
+            "dataType": "double",
+            "sourceColumn": "INVENTARIO",
+            "sourceProviderType": "Numeric"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_PRODUCTOS",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DIM_PRODUCTOS].* FROM [dbo].[DIM_PRODUCTOS] ",
+              "dataSource": "UTNDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_PRODUCTOS].* FROM [dbo].[DIM_PRODUCTOS] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_PRODUCTOS"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "DIM_SUCURSALES",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CODIGO",
+            "dataType": "double",
+            "sourceColumn": "CODIGO",
+            "sourceProviderType": "Numeric"
+          },
+          {
+            "name": "NOMBRE",
+            "dataType": "string",
+            "sourceColumn": "NOMBRE",
+            "sourceProviderType": "WChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DIM_SUCURSALES",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[DIM_SUCURSALES].* FROM [dbo].[DIM_SUCURSALES] ",
+              "dataSource": "UTNDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[DIM_SUCURSALES].* FROM [dbo].[DIM_SUCURSALES] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "DIM_SUCURSALES"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      },
+      {
+        "name": "FACT_VENTAS",
+        "columns": [
+          {
+            "name": "ID",
+            "dataType": "int64",
+            "sourceColumn": "ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "SUCURSAL_ID",
+            "dataType": "int64",
+            "sourceColumn": "SUCURSAL_ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "PRODUCTO_ID",
+            "dataType": "int64",
+            "sourceColumn": "PRODUCTO_ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CLIENTE_ID",
+            "dataType": "int64",
+            "sourceColumn": "CLIENTE_ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "EMPLEADO_ID",
+            "dataType": "int64",
+            "sourceColumn": "EMPLEADO_ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "FECHA_ID",
+            "dataType": "int64",
+            "sourceColumn": "FECHA_ID",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CODIGO",
+            "dataType": "int64",
+            "sourceColumn": "CODIGO",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CANTIDAD",
+            "dataType": "int64",
+            "sourceColumn": "CANTIDAD",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TOTAL",
+            "dataType": "int64",
+            "sourceColumn": "TOTAL",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FACT_VENTAS",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": " SELECT [dbo].[FACT_VENTAS].* FROM [dbo].[FACT_VENTAS] ",
+              "dataSource": "UTNDW"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": " SELECT [dbo].[FACT_VENTAS].* FROM [dbo].[FACT_VENTAS] "
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "FACT_VENTAS"
+          },
+          {
+            "name": "_TM_ExtProp_DbSchemaName",
+            "value": "dbo"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "83e60a40-0ece-4e36-a847-3911cc4e8f43",
+        "fromTable": "FACT_VENTAS",
+        "fromColumn": "CLIENTE_ID",
+        "toTable": "DIM_CLIENTES",
+        "toColumn": "ID"
+      },
+      {
+        "name": "db69c4bf-7a8b-4e57-8e62-2e705676d092",
+        "fromTable": "FACT_VENTAS",
+        "fromColumn": "EMPLEADO_ID",
+        "toTable": "DIM_EMPLEADOS",
+        "toColumn": "ID"
+      },
+      {
+        "name": "ee9d8e36-ff4e-49c9-825e-9b7cebd1b988",
+        "fromTable": "FACT_VENTAS",
+        "fromColumn": "FECHA_ID",
+        "toTable": "DIM_FECHAS",
+        "toColumn": "ID"
+      },
+      {
+        "name": "ecbf096a-664e-40c9-b03d-e8c2db39f698",
+        "fromTable": "FACT_VENTAS",
+        "fromColumn": "PRODUCTO_ID",
+        "toTable": "DIM_PRODUCTOS",
+        "toColumn": "ID"
+      },
+      {
+        "name": "304b6258-a786-4662-a2d2-feb22c46323a",
+        "fromTable": "FACT_VENTAS",
+        "fromColumn": "SUCURSAL_ID",
+        "toTable": "DIM_SUCURSALES",
+        "toColumn": "ID"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
